@@ -32,6 +32,55 @@ class UsuarioController
         require __DIR__ . '/../views/usuarios/criar.php';
     }
 
+    public function editar()
+    {
+        $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
+        if(!$id)
+            {
+                header('Location: /lp3_projeto/usuarios');
+                exit;
+            }
+
+        //Verificica se houve post e faz a gravação dos dados no banco
+        if($_SERVER['REQUEST_METHOD'] === 'POST')
+            {
+                $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+                $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+
+                if($nome && $email)
+                    {
+                        $this->model->atualizar($id, $nome, $email);
+                        header('Location: /lp3_projeto/usuarios');
+                        exit;
+                    }
+            }
+        //Busca dados do usuario e carrega tela com os dados
+        $usuario = $this->model->buscarPorId($id);
+
+        if(!$usuario)
+            {
+                header('Location: /lp3_projeto/usuarios');
+                exit;
+            }
+
+        require __DIR__ . '/../views/usuarios/editar.php';
+    }
+
+    public function excluir()
+    {
+        $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
+        if($id)
+            {
+                $this->model->excluir($id);
+            }
+
+        header('Location: /lp3_projeto/usuarios');
+        exit;
+    }
+
+
 }
 
 

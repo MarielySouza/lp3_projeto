@@ -24,10 +24,21 @@ if (empty($uri)) {
 
 // Tabela de Roteamento (Mapeamento de Rotas)
 $rotas = [
-    '/'                         => ['controller' => 'HomeController',    'metodo' => 'index'],
-    '/empresa'                  => ['controller' => 'HomeController',    'metodo' => 'sobre'],
-    '/usuarios'                 => ['controller' => 'UsuarioController',    'metodo' => 'index'],
-    '/usuarios/adicionar'       => ['controller' => 'UsuarioController',    'metodo' => 'adicionar'],
+    '/'                         => ['controller' => 'HomeController',         'metodo' => 'index'],
+    '/empresa'                  => ['controller' => 'HomeController',         'metodo' => 'sobre'],
+    '/usuarios'                 => ['controller' => 'UsuarioController',      'metodo' => 'index'],
+    '/usuarios/adicionar'       => ['controller' => 'UsuarioController',      'metodo' => 'adicionar'],
+    '/usuarios/editar'          => ['controller' => 'UsuarioController',      'metodo' => 'editar'],
+    '/usuarios/excluir'         => ['controller' => 'UsuarioController',      'metodo' => 'excluir'],
+    '/categorias'               => ['controller' => 'CategoriaController',    'metodo' => 'index'],
+    '/categorias/adicionar'     => ['controller' => 'CategoriaController',    'metodo' => 'adicionar'],
+    '/categorias/editar'        => ['controller' => 'CategoriaController',    'metodo' => 'editar'],
+    '/categorias/excluir'       => ['controller' => 'CategoriaController',    'metodo' => 'excluir'],
+    '/produtos'                 => ['controller' => 'ProdutoController',      'metodo' => 'index'],
+    '/produtos/adicionar'       => ['controller' => 'ProdutoController',      'metodo' => 'adicionar'],
+    '/produtos/editar'          => ['controller' => 'ProdutoController',      'metodo' => 'editar'],
+    '/produtos/excluir'         => ['controller' => 'ProdutoController',      'metodo' => 'excluir'],
+
 ];
 
 // Verificação de existência da rota

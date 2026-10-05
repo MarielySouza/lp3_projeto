@@ -6,6 +6,8 @@
     <nav class="sidebar-nav" aria-label="Menu lateral">
         <ul>
             <li><a href="/lp3_projeto/">Início</a></li>
+            <li><a href="/lp3_projeto/categorias">Categorias</a></li>
+            <li><a href="/lp3_projeto/categorias">Produtos</a></li>
             <li><a href="/lp3_projeto/usuarios">Usuários</a></li>
         </ul>
     </nav>

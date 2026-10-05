@@ -2,9 +2,10 @@
 
     require_once __DIR__ . '/../config/Database.php';
 
-    class Usuario 
+    class Produto 
     {
         private $db;
+        private $tabela = "produtos";
 
         public function __construct()
         {
@@ -13,32 +14,32 @@
 
         public function listar()
         {
-            $stmt = $this->db->query("select * from usuarios order by id desc");
+            $stmt = $this->db->query("select * from $this->tabela order by id desc");
             return $stmt->fetchAll();
 
         }
 
-        public function salvar(string $nome, string $email)
+        public function salvar(string $produto, string $descricao)
         {
-            $sql = "insert into usuarios (nome, email) values (:nome, :email)";
+            $sql = "insert into $this->tabela (produto, descricao) values (:produto, :descricao)";
             $stmt = $this->db->prepare($sql);
             $values = 
             [
-                ':nome' => $nome,
-                ':email' => $email,
+                ':produto' => $produto,
+                ':descricao' => $descricao,
 
             ];
             return $stmt->execute($values);
         }
 
-        public function atualizar(int $id, string $nome, string $email)
+        public function atualizar(int $id, string $produto, string $descricao)
         {
-            $sql = "update usuarios set nome=:nome, email=:email where id=:id";
+            $sql = "update $this->tabela set produto=:produto, descricao=:descricao where id=:id";
             $stmt = $this->db->prepare($sql);
             $values = 
             [
-                ':nome' => $nome,
-                ':email' => $email,
+                ':produto' => $produto,
+                ':descricao' => $descricao,
                 ':id' => $id,
 
             ];
@@ -47,7 +48,7 @@
 
         public function buscarPorId(int $id)
         {
-            $sql = "select * from usuarios where id =:id";
+            $sql = "select * from $this->tabela where id =:id";
             $stmt = $this->db->prepare($sql);
             $values = [':id' => $id];
             $stmt->execute($values);
@@ -56,7 +57,7 @@
 
         public function excluir(int $id)
         {
-            $sql = "delete from usuarios where id = :id";
+            $sql = "delete from $this->tabela where id = :id";
             $stmt = $this->db->prepare($sql);
             $values = [':id' => $id];
             $stmt->execute($values);
