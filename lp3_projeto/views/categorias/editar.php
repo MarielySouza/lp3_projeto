@@ -8,7 +8,7 @@
             <h3>Editar Categorias</h3>
         </div>
 
-        <form action="/lp3_projeto/categoria/editar?id=<?= $dado['id'] ?>" method="POST" class="card-form">
+        <form action="/lp3_projeto/categorias/editar?id=<?= $dado['id'] ?>" method="POST" class="card-form">
             <div class="form-group">
                 <label for="categoria">Categoria:</label>
                 <input type="text" id="categoria" name="categoria" value="<?= htmlspecialchars($dado['categoria']) ?>" required class="form-control">

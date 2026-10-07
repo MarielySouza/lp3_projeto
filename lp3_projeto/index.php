@@ -38,6 +38,10 @@ $rotas = [
     '/produtos/adicionar'       => ['controller' => 'ProdutoController',      'metodo' => 'adicionar'],
     '/produtos/editar'          => ['controller' => 'ProdutoController',      'metodo' => 'editar'],
     '/produtos/excluir'         => ['controller' => 'ProdutoController',      'metodo' => 'excluir'],
+    '/clientes'                 => ['controller' => 'ClienteController',      'metodo' => 'index'],
+    '/clientes/adicionar'       => ['controller' => 'ClienteController',      'metodo' => 'adicionar'],
+    '/clientes/editar'          => ['controller' => 'ClienteController',      'metodo' => 'editar'],
+    '/clientes/excluir'         => ['controller' => 'ClienteController',      'metodo' => 'excluir'],
 
 ];
 
