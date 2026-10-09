@@ -19,13 +19,13 @@ class ClienteController
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST')
             {
-                $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-                $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-                $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_NUMBER_INT);
+                $nome    = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+                $email   = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+                $cpf     = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_NUMBER_INT);
                 $salario = filter_input(INPUT_POST, 'salario', FILTER_SANITIZE_NUMBER_FLOAT);
-                $sexo = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_SPECIAL_CHARS);
-                $data = filter_input(INPUT_POST, 'data', FILTER_SANITIZE_NUMBER_INT);
-                $obs = filter_input(INPUT_POST, 'obs', FILTER_SANITIZE_SPECIAL_CHARS);
+                $sexo    = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_SPECIAL_CHARS);
+                $data    = filter_input(INPUT_POST, 'data', FILTER_SANITIZE_NUMBER_INT);
+                $obs     = filter_input(INPUT_POST, 'obs', FILTER_SANITIZE_SPECIAL_CHARS);
 
                 if($nome && $email && $cpf && $salario && $sexo && $data && $obs)
                     {
@@ -50,13 +50,13 @@ class ClienteController
         //Verificica se houve post e faz a gravação dos dados no banco
         if($_SERVER['REQUEST_METHOD'] === 'POST')
             {
-                $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-                $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-                $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_SPECIAL_CHARS);
-                $salario = filter_input(INPUT_POST, 'salario', FILTER_SANITIZE_NUMBER_FLOAT);
-                $sexo = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_SPECIAL_CHARS);
-                $data = filter_input(INPUT_POST, 'data', FILTER_SANITIZE_NUMBER_INT);
-                $obs = filter_input(INPUT_POST, 'obs', FILTER_SANITIZE_SPECIAL_CHARS);
+                $nome     = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+                $email    = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+                $cpf      = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_SPECIAL_CHARS);
+                $salario  = filter_input(INPUT_POST, 'salario', FILTER_SANITIZE_NUMBER_FLOAT);
+                $sexo     = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_SPECIAL_CHARS);
+                $data     = filter_input(INPUT_POST, 'data', FILTER_SANITIZE_NUMBER_INT);
+                $obs      = filter_input(INPUT_POST, 'obs', FILTER_SANITIZE_SPECIAL_CHARS);
 
                 if($nome && $email && $cpf && $salario && $sexo && $data && $obs)
                     {

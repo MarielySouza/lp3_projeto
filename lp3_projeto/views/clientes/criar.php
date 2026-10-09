@@ -16,38 +16,38 @@
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email"  class="form-control"  name="email" id="email" placeholder="Ex: joao@gmail.com"></input>
+                <input type="email"  class="form-control"  name="email" id="email" placeholder="Ex: joao@gmail.com">
             </div>
 
 
             <div class="form-group">
                 <label for="cpf">Cpf:</label>
-                <input type="text"  class="form-control"  name="cpf" id="cpf" placeholder="Ex: 123.456.789-11"></input>
+                <input type="text"  class="form-control"  name="cpf" id="cpf" placeholder="Ex: 123.456.789-11">
             </div>
 
             <div class="form-group">
                 <label for="salario">Salario:</label>
-                <input type="number"  class="form-control"  name="salario" id="salario"></input>
+                <input type="text"  class="form-control"  name="salario" id="salario">
             </div>
 
              <div class="form-group">
                 <label for="sexo">Sexo:</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" name="sexo">
                     <option selected>Selecione um Gênero</option>
-                    <option value="1">Feminino</option>
-                    <option value="2">Masculino</option>
-                    <option value="3">Outro</option>
+                    <option value="F">Feminino</option>
+                    <option value="M">Masculino</option>
+                    <option value="O">Outro</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="data">Data de Nascimento:</label>
-                <input type="date"  class="form-control"  name="data" id="data"></input>
+                <input type="date"  class="form-control"  name="data" id="data">
             </div>
 
             <div class="form-group">
                 <label for="obs">Observações:</label>
-                <input type="text"  class="form-control"  name="obs" id="obs"></input>
+                <textarea type="text"  class="form-control"  name="obs" id="obs"></textarea>
             </div>
 
             <div class="mt-3 d-flex gap-2">

@@ -14,12 +14,12 @@
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th>E-mail</th>
                     <th>Cpf</th>
                     <th>Salario</th>
                     <th>Sexo</th>
                     <th>Data de Nascimento</th>
                     <th>Observações</th>
-
                     <th class="text-center">Ações</th>
                 </tr>
             </thead>
