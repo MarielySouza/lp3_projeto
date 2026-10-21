@@ -15,7 +15,23 @@
             </div>
 
             <div class="form-group">
-                <label for="descricao">Preço::</label>
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" name="valor" step="0.01" required class="form-control" placeholder="Ex: 19.99">
+            </div>
+
+            <div class="form-group">
+                <label for="categoria_id">Categoria:</label>
+                <select class="form-select"  name="categoria" id="categoria" required>
+                    <option value="">Selecione uma Categoria</option>
+                    <?php foreach ($categorias as $categoria){ ?>
+                      <option value="<?= $categoria['id']?>"><?= $categoria['categoria']?></option>
+                    <?php } ?>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
                 <textarea class="form-control"  name="descricao" id="descricao" placeholder="Ex: Anti Caspa"></textarea>
             </div>
 
