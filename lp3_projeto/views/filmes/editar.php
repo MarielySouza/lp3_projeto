@@ -8,7 +8,7 @@
             <h3>Editar Filmes</h3>
         </div>
 
-        <form action="/lp3_projeto/filmes/editar?id=<?= $dado['id'] ?>" method="POST" class="card-form">
+        <form action="/lp3_projeto/filmes/editar?id=<?= $dado['id'] ?>" method="POST" enctype="multipart/form-data" class="card-form">
             <div class="form-group">
                 <label for="filme">Filme:</label>
                 <input type="text" id="filme" name="filme" value="<?= htmlspecialchars($dado['filme']) ?>" required class="form-control">
@@ -22,6 +22,11 @@
             <div class="form-group">
                 <label for="duracao">Duração:</label>
                 <input type="text" id="duracao" name="duracao" value="<?= htmlspecialchars($dado['duracao']) ?>" required class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="imagem">Imagem:</label>
+                <input class="form-control" type="file"  name="imagem" id="imagem" accept="image/jpeg,image/png,image/gif,image/webp">
             </div>
 
             <div class="mt-3 d-flex gap-2">

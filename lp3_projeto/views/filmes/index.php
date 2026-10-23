@@ -13,6 +13,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Imagem</th>
                     <th>Filme</th>
                     <th>Diretor</th>
                     <th>Duração</th>
@@ -24,8 +25,13 @@
                     <?php foreach ($dados as $linha): ?>
                         <tr>
                             <td><?= $linha['id'] ?></td>
+                            <td><?php  if (!empty($linha['imagem'])): ?>
+                                <img src="/lp3_projeto/uploads/filmes/<?=  rawurlencode($linha['imagem']) ?>" 
+                                style="max-width: 100px; height:auto;">
+                            </td>
                             <td><?= htmlspecialchars($linha['filme']) ?></td>
                             <td><?= htmlspecialchars($linha['diretor']) ?></td>
+                            <td><?= htmlspecialchars($linha['duracao']) ?></td>
                             <td class="text-center">
                                 <a href="/lp3_projeto/filmes/editar?id=<?= $linha['id'] ?>" class="btn btn-warning btn-sm">Editar</a>
 
