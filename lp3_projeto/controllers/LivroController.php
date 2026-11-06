@@ -3,10 +3,12 @@
 class LivroController
 {
     private $model;
+    private $generoModel;
 
     public function __construct()
     {
         $this->model = new Livro();
+        $this->generoModel = new Genero();
     }
 
     public function index()
@@ -27,6 +29,7 @@ class LivroController
                 $capa = filter_input(INPUT_POST, 'capa', FILTER_SANITIZE_SPECIAL_CHARS);
                 $genero_id = filter_input(INPUT_POST, 'genero_id', FILTER_VALIDATE_INT);
                 $criado_em  = filter_input(INPUT_POST, 'criado_em', FILTER_SANITIZE_NUMBER_INT);
+            
 
 
                 if($titulo && $autor && $isbn && $ano_publicacao && $sinopse && $capa && $genero_id && $criado_em)

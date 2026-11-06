@@ -50,6 +50,10 @@ $rotas = [
     '/generos/adicionar'        => ['controller' => 'GeneroController',       'metodo' => 'adicionar'],
     '/generos/editar'           => ['controller' => 'GeneroController',       'metodo' => 'editar'],
     '/generos/excluir'          => ['controller' => 'GeneroController',       'metodo' => 'excluir'],
+    '/livros'                   => ['controller' => 'LivroController',        'metodo' => 'index'],
+    '/livros/adicionar'         => ['controller' => 'LivroController',        'metodo' => 'adicionar'],
+    '/livros/editar'            => ['controller' => 'LivroController',        'metodo' => 'editar'],
+    '/livros/excluir'           => ['controller' => 'LivroController',        'metodo' => 'excluir'],
 
 ];
 

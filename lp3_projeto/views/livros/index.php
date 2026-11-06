@@ -5,21 +5,20 @@
 
     <div class="content-panel">
         <div class="header-action">
-            <h3>Clientes Cadastrados</h3>
-            <a href="/lp3_projeto/clientes/adicionar" class="btn btn-success btn-sm">+ Adicionar</a>
+            <h3>Livros Cadastrados</h3>
+            <a href="/lp3_projeto/livros/adicionar" class="btn btn-success btn-sm">+ Adicionar</a>
         </div>
 
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>Cpf</th>
-                    <th>Salario</th>
-                    <th>Sexo</th>
-                    <th>Data de Nascimento</th>
-                    <th>Observações</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Isbn</th>
+                    <th>Ano de puclicação</th>
+                    <th>Sinopse</th>
+                    <th>Gênero</th>
+                    <th>Criado em</th>
                     <th class="text-center">Ações</th>
                 </tr>
             </thead>
@@ -28,17 +27,17 @@
                     <?php foreach ($dados as $linha): ?>
                         <tr>
                             <td><?= $linha['id'] ?></td>
-                            <td><?= htmlspecialchars($linha['nome']) ?></td>
-                            <td><?= htmlspecialchars($linha['email']) ?></td>
-                            <td><?= ($linha['cpf']) ?></td>
-                            <td><?= ($linha['salario']) ?></td>
-                            <td><?= htmlspecialchars($linha['sexo']) ?></td>
-                            <td><?= htmlspecialchars($linha['data']) ?></td>
-                            <td><?= htmlspecialchars($linha['obs']) ?></td>
+                            <td><?= htmlspecialchars($linha['titulo']) ?></td>
+                            <td><?= htmlspecialchars($linha['autor']) ?></td>
+                            <td><?= htmlspecialchars($linha['isbn']) ?></td>
+                            <td><?= htmlspecialchars($linha['ano_publicacao']) ?></td>
+                            <td><?= htmlspecialchars($linha['sinopse']) ?></td>
+                            <td><?= htmlspecialchars($linha['genero']) ?></td>
+                            <td><?= htmlspecialchars($linha['criado_em']) ?></td>
                             <td class="text-center">
-                                <a href="/lp3_projeto/clientes/editar?id=<?= $linha['id'] ?>" class="btn btn-warning btn-sm">Editar</a>
+                                <a href="/lp3_projeto/livros/editar?id=<?= $linha['id'] ?>" class="btn btn-warning btn-sm">Editar</a>
 
-                                <a href="/lp3_projeto/clientes/excluir?id=<?= $linha['id'] ?>" 
+                                <a href="/lp3_projeto/livros/excluir?id=<?= $linha['id'] ?>" 
                                    class="btn btn-danger btn-sm" 
                                    onclick="return confirm('Tem certeza que deseja excluir este registro?');">
                                    Excluir
